@@ -11,3 +11,13 @@ class sleepview(viewsets.ModelViewSet):
     serializer_class = sleepserializers
     http_method_names = ["get","post","put","delete"]
 
+from Human_Health.models import Food
+from .serializers import Foodserializer
+
+def food(request):
+    pass
+
+class Foodview(viewsets.ModelViewSet):
+    queryset= Food.objects.all()
+    serializer_class=Foodserializer
+    http_method_names=["get","post","put","delete"]

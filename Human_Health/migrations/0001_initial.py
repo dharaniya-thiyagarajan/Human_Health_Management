@@ -12,6 +12,7 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
+<<<<<<< HEAD
             name='sleep',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
@@ -22,5 +23,18 @@ class Migration(migrations.Migration):
             options={
                 'db_table': 'sleep',
             },
+=======
+            name='food',
+            fields=[
+                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('Date', models.DateField()),
+                ('Breakfasttime', models.TimeField()),
+                ('BreakfastLocation', models.CharField(max_length=30)),
+                ('LunchTime', models.DateField()),
+                ('LunchLocation', models.CharField(max_length=30)),
+                ('DinnerTime', models.DateField()),
+                ('DinnerLocation', models.CharField(max_length=30)),
+            ],
+>>>>>>> eed1f1da9d7174a280bab1e8811bc0d0a5264a3b
         ),
     ]
