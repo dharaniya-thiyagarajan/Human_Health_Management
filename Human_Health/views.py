@@ -1,3 +1,11 @@
-from django.shortcuts import render
+from rest_framework import viewsets
+from Human_Health.models import Food
+from .serializers import Foodserializer
 
-# Create your views here.
+def food(request):
+    pass
+
+class Foodview(viewsets.ModelViewSet):
+    queryset= Food.objects.all()
+    serializer_class=Foodserializer
+    http_method_names=["get","post","put","delete"]
